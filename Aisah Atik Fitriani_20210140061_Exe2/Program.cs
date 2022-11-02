@@ -39,6 +39,7 @@ namespace Exercise2
 
         public void InsertionSort()
         {
+            
             Console.Write("\nEnter number of elements :");
             int max = Convert.ToInt32(Console.ReadLine());
             int[] aisah = new int[81];
@@ -53,13 +54,28 @@ namespace Exercise2
             Console.Write("\n");
             for (int i = 1;i < max; i++)
             {
-                int j = i - 1;
-                while(j > 0)
+                int AF = i - 1;
+                while(AF > 0)
                 {
-
+                    if (aisah[AF - 1] > aisah[AF])
+                    {
+                        int temp = aisah[AF - 1];
+                        aisah[AF - 1] = aisah[AF];
+                        aisah[AF] = temp;
+                        AF--;
+                    }
+                    else
+                        break;
                 }
             }
-
+            Console.Write("\n\nThe numbers in ascending orders are given below:\n\n");
+            for (int i = 0; i < max; i++)
+            {
+                Console.Write("Sorted [" + (i + 1).ToString() + "] element: ");
+                Console.Write(aisah[i]);
+                Console.Write("\n");
+            }
+            
         }
     }
 }
