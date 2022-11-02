@@ -47,6 +47,18 @@ namespace Exercise2
                 Console.Write("\nEnter [" + (i + 1).ToString() + "] elements : ");
                 aisah[i] = Convert.ToInt32(Console.ReadLine());
             }
+            Console.WriteLine("Input int array : ");
+            for (int k = 0; k < max; k++) 
+                Console.Write(aisah[k] + "");
+            Console.Write("\n");
+            for (int i = 1;i < max; i++)
+            {
+                int j = i - 1;
+                while(j > 0)
+                {
+
+                }
+            }
 
         }
     }
